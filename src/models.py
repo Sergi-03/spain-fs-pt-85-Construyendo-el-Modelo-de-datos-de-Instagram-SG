@@ -11,8 +11,9 @@ class Follower(Base):
     __tablename__ = 'follower'
     # Here we define columns for the table person
     # Notice that each column is also a normal Python instance attribute.
-    user_from_id = Column(Integer, ForeignKey('user.id'), primary_key=True)
-    user_to_id = Column(Integer, ForeignKey('user.id'), primary_key=True)
+    id = Column(Integer, primary_key=True)
+    user_from_id = Column(Integer, ForeignKey('user.id'))
+    user_to_id = Column(Integer, ForeignKey('user.id'))
     
 
 class User(Base):
@@ -26,8 +27,8 @@ class User(Base):
     email = Column(String(100), unique=True, nullable=False)
     posts = relationship('Post', back_populates='author')
     comments = relationship('Comment', back_populates='author')
-    followers = relationship('Follower', foreign_keys=[Follower.user_to_id], backref='followed_user')
-    following = relationship('Follower', foreign_keys=[Follower.user_from_id], backref='follower_user')
+    followers = relationship('Follower', foreign_keys=[Follower.user_to_id])
+    following = relationship('Follower', foreign_keys=[Follower.user_from_id])
     
 
 
