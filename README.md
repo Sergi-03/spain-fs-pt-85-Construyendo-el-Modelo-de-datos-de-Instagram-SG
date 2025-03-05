@@ -1,48 +1,34 @@
-<!--hide-->
-# Create the database model for Instagram
-<!--endhide-->
+# Spain FS PT 85 - Construyendo el Modelo de Datos de Instagram
 
-**Important**: To do this activity you need to `fork` [this repo](https://github.com/breatheco-de/exercise-instagram-data-modeling) into your **Github** account and then open the forked repo on Codespaces (recommended) or Gitpod.
+Este proyecto consiste en diseñar un modelo de datos para una plataforma similar a Instagram. El objetivo es crear una estructura de base de datos relacional que permita almacenar la información de usuarios, publicaciones, comentarios, seguidores, likes y otros elementos clave de la aplicación.
 
-Inside the `src/models.py` file, you will find a couple of classes describing an example database.
+## Características
 
-Here is a 10 min video explaining what UML is: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
+- **Usuarios**: Información sobre los usuarios de la plataforma, como su nombre, correo electrónico y foto de perfil.
+- **Publicaciones**: Registro de las publicaciones realizadas por los usuarios, incluyendo texto, imágenes y fecha.
+- **Comentarios**: Comentarios realizados por los usuarios en las publicaciones.
+- **Seguidores**: Relación entre los usuarios para gestionar a quién siguen y quién los sigue.
+- **Likes**: Registro de los "me gusta" que los usuarios dan a las publicaciones.
 
-The `diagram.png` file generates a database chart based on the classes that you will be creating. Such charts in Database Management are referred to as ERDs (Entity Relatonship Diagrams). 
+## Tecnologías
 
-Please watch these two short videos explaining ERDs: 
-+ [https://www.youtube.com/watch?v=QpdhBUYk7Kk](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
-+ [https://www.youtube.com/watch?v=-CuY5ADwn24](https://www.youtube.com/watch?v=-CuY5ADwn24)
+Este proyecto está desarrollado utilizando las siguientes tecnologías:
 
-You will have to create the Entity Relationship Diagram for Instagram's Database - a very similar diagram to this one:
+- **SQL**: Lenguaje de consulta estructurado utilizado para la gestión de la base de datos.
+- **PostgreSQL**: Sistema de gestión de bases de datos relacional (RDBMS) utilizado para almacenar la información.
+- **Diagrama ER (Entidad-Relación)**: Representación visual de las entidades y sus relaciones en el sistema, diseñada para reflejar la estructura de datos.
 
-![Instagram Diagram](https://github.com/breatheco-de/exercise-instagram-data-modeling/blob/master/assets/example.png?raw=true)
-[Click to open diagram](https://app.quickdatabasediagrams.com/#/d/LxNXQZ)
+## Estructura del Modelo de Datos
 
-> 🔥 You can use this FREE tool to practice your diagram for the first time: https://app.quickdatabasediagrams.com/#/d/
+El modelo de datos está basado en las siguientes entidades y relaciones:
 
-
-## 💻 Installation
-
-1. Get inside the environment `$ pipenv shell`
-
-2. Install all dependencies `$ pipenv install`
-
-3. Generate the diagram as many times as you need `$ python src/models.py`
-
-4. Open the file `diagram.png` to check out your ERD diagram!
+- **Usuarios**: Cada usuario tiene un identificador único, nombre, correo electrónico y foto de perfil.
+- **Publicaciones**: Las publicaciones están asociadas a un usuario, tienen un identificador único, un texto, una imagen y una fecha de publicación.
+- **Comentarios**: Los comentarios están asociados a una publicación y a un usuario, y contienen texto y fecha.
+- **Seguidores**: Cada usuario puede seguir a otros usuarios. La relación de seguidores se maneja en una tabla de relaciones.
+- **Likes**: Los likes son dados por los usuarios a las publicaciones, y se registran en una tabla de relaciones.
 
 
-## 📝Instructions
+## Contacto
 
-Your job is to update the `src/models.py` file with the code needed to replicate Instagram's data model.
-
-The project is using the SQLAlchemy Python library to generate the database.
-
-- What tables do you think Instagram might have on its database: E.g: Post, User, etc.?
-- What properties should go inside the User? or inside the Post table?
-- Please add at least 4 models with all of their properties.
-- Refresh the `diagram.png` file at the end by running `$ python src/models.py` on the console.
-
-This and many other projects are built by students as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
+Si tienes preguntas o comentarios, no dudes en contactarme en: [ssegarragarcia@gmail.com]
