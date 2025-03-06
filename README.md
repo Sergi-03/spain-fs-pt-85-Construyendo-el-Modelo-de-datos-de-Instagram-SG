@@ -28,6 +28,29 @@ El modelo de datos está basado en las siguientes entidades y relaciones:
 - **Seguidores**: Cada usuario puede seguir a otros usuarios. La relación de seguidores se maneja en una tabla de relaciones.
 - **Likes**: Los likes son dados por los usuarios a las publicaciones, y se registran en una tabla de relaciones.
 
+## Uso
+
+### 1. Clona el repositorio
+```bash
+git clone https://github.com/Sergi-03/spain-fs-pt-85-Construyendo-el-Modelo-de-datos-de-Instagram-SG.git
+cd spain-fs-pt-85-Construyendo-el-Modelo-de-datos-de-Instagram-SG
+```
+
+### 2. Instala dependencias
+```bash
+pipenv install
+pipenv shell
+```
+
+### 3. Crea la base de datos
+```bash
+flask db init
+flask db migrate -m "Initial migration."
+flask db upgrade
+```
+
+---
+
 
 ## Contacto
 
